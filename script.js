@@ -21,8 +21,8 @@ setTimeout(() => {
   heartShape.forEach(([x, y]) => {
     const heart = document.createElement('div');
     heart.className = 'Heart';
-    heart.style.left = `${250 + x * 8}px`;
-    heart.style.top = `${150 + y * 8}px`;
+    heart.style.left = `${50 + x * 2.5}%`;
+    heart.style.top = `${50 + y * 2.5}%`;
 
     container.appendChild(heart);
 
@@ -44,4 +44,4 @@ setTimeout(() => {
     message.style.opacity = 1;
   }, delay + 2000);
 
-}, 2000); // Espera a que el muñequito haya aparecido (2s)
+}, 2000);

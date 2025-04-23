@@ -3,16 +3,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: #fff;
     font-family: sans-serif;
   }
   
   .scene {
     position: relative;
-    width: 100%;
+    width: 90vw;
     max-width: 600px;
-    height: 500px;
+    aspect-ratio: 6 / 5;
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -21,9 +21,10 @@ body {
   
   .muneco {
     position: absolute;
-    left: 30px;
-    bottom: 30px;
-    width: 100px;
+    left: 5%;
+    bottom: 5%;
+    width: 16vw;
+    max-width: 100px;
     opacity: 0;
     animation: aparecer 2s ease forwards;
   }
@@ -46,18 +47,20 @@ body {
   .love.flotar {
     animation: flotarCorazon 2s ease forwards;
   }
-
+  
   .love {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    width: 100%;
-    height: 100%;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
   }
   
   .Heart {
-    width: 20px;
-    height: 20px;
+    width: 4vw;
+    max-width: 20px;
+    height: 4vw;
+    max-height: 20px;
     background: url("Heart.png") no-repeat center;
     background-size: contain;
     position: absolute;
@@ -68,12 +71,27 @@ body {
   
   .message {
     position: absolute;
-    bottom: 40px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2em;
+    font-size: 1.5em;
     color: #e91e63;
     opacity: 0;
     transition: opacity 1s;
+    padding: 0 1rem;
+  }
+  
+  /* Responsividad adicional */
+  @media (max-width: 480px) {
+    .message {
+      font-size: 1.2em;
+    }
+    .muneco {
+      width: 20vw;
+    }
+    .Heart {
+      width: 5vw;
+      height: 5vw;
+    }
   }
   
